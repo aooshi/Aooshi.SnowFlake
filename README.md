@@ -1,4 +1,4 @@
-Unique Id Generator
+Aooshi.SnowFlake
 ===================
 
 C# implementation of Twitter's Snowflake. A Generator can create sequentially unique IDs with a length of 8 bytes.  
