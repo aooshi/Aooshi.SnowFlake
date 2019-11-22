@@ -16,7 +16,7 @@ With the default configuration you can create 1024 different generators. Each ge
 Usage
 -----
 
-First, grab the assembly from [NuGet](https://www.nuget.org/packages/UniqueIdGenerator/).
+First, grab the assembly from [NuGet](https://www.nuget.org/packages/Aooshi.SnowFlake/).
 
 ```csharp
 // Create a new instance of the generator
@@ -76,3 +76,4 @@ Number of ids generated in 1 s: 8'476'821
 # License
 
 Developed by [Michael Schuler](https://www.michaelschuler.ch) under the [MIT License](LICENSE)
+Developed by [Aooshi.org](https://www.aooshi.org) 2019 under the [MIT License](LICENSE)

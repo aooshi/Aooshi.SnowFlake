@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <Authors>Xiaobo LI</Authors>
+    <Version>1.0.0</Version>
+	<Title>Aooshi.SnowFlake</Title>
+	<PackageDescription>Easy to use and super fast C# implementation of Twitter's Snowflake to generate sequential 8 byte unique identifiers.</PackageDescription>
+    <RepositoryUrl>https://www.aooshi.org/link?n=Aooshi.SnowFlake.Source</RepositoryUrl>
+    <Company>Aooshi.org</Company>
+    <Description>C# implementation of Twitter's Snowflake</Description>
+    <Copyright>Copyright Aooshi.org © 2019</Copyright>
+    <PackageProjectUrl>https://www.aooshi.org/link?n=Aooshi.SnowFlake</PackageProjectUrl>
+    <RepositoryType />
+
+
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+
+
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+
+    <PackageIconUrl>https://www.aooshi.com/aooshi64.png</PackageIconUrl>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE" Pack="true" PackagePath="" />
+  </ItemGroup>
+  
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>C:\develop\bin\Aooshi.SnowFlake\1.0.x\</OutputPath>
+    <DocumentationFile>C:\develop\bin\Aooshi.SnowFlake\1.0.x\netstandard1.0\Aooshi.SnowFlake.xml</DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+</Project>
