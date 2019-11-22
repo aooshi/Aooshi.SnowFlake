@@ -76,4 +76,5 @@ Number of ids generated in 1 s: 8'476'821
 # License
 
 Developed by [Michael Schuler](https://www.michaelschuler.ch) under the [MIT License](LICENSE)
+
 Developed by [Aooshi.org](https://www.aooshi.org) 2019 under the [MIT License](LICENSE)
