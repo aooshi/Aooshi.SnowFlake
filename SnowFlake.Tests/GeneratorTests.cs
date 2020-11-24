@@ -18,6 +18,23 @@ namespace Aooshi.SnowFlake.Tests
         }
 
         [Fact]
+        public void one_num_hex()
+        {
+            const int number = 1000;
+            const int machineId = 0;
+
+            //
+            var generator = new Generator(machineId, DateTime.Today);
+
+            //
+            for (int i = 0; i < number; i++)
+            {
+                _output.WriteLine(generator.NextHex());
+                //Debug.WriteLine(generator.NextHex());
+            }
+        }
+
+        [Fact]
         public void When_generating_hundred_thousand_ids_with_one_single_generator_then_every_id_is_unique()
         {
             const int number = 100000;

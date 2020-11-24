@@ -3,12 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
     <Authors>Xiaobo LI</Authors>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
 	<Title>Aooshi.SnowFlake</Title>
 	<PackageDescription>Easy to use and super fast C# implementation of Twitter's Snowflake to generate sequential 8 byte unique identifiers.</PackageDescription>
     <RepositoryUrl>https://www.aooshi.org/link?n=Aooshi.SnowFlake.Source</RepositoryUrl>
     <Company>Aooshi.org</Company>
-    <Description>C# implementation of Twitter's Snowflake</Description>
+    <Description>C# implementation of Twitter's Snowflake，Aooshi.SnowFlake.Generator.One.NextHex()</Description>
     <Copyright>Copyright Aooshi.org © 2019</Copyright>
     <PackageProjectUrl>https://www.aooshi.org/link?n=Aooshi.SnowFlake</PackageProjectUrl>
     <RepositoryType />

@@ -10,6 +10,11 @@ namespace Aooshi.SnowFlake
     /// </summary>
     public class Generator
     {
+        /// <summary>
+        /// generatorId one
+        /// </summary>
+        public readonly static Generator One = new Generator(1, new DateTime(2019, 1, 1, 1, 1, 1, DateTimeKind.Utc));
+
         // should be between 40 (34 years) and 42 (139 years)
         internal static int NumberOfTimeBits = 42;
 
@@ -84,6 +89,36 @@ namespace Aooshi.SnowFlake
 
             Array.Reverse(_buffer);
             return BitConverter.ToUInt64(_buffer, 0);
+        }
+
+        public string NextHex()
+        {
+            SpinToNextSequence();
+            WriteValuesToByteArray(_buffer, _previousTime, _sequence);
+
+            //Array.Reverse(_buffer);
+
+            var build = new System.Text.StringBuilder();
+            foreach (var b in _buffer)
+            {
+                build.Append(b.ToString("x2"));
+            }
+            return build.ToString();
+        }
+
+        public string NextHexUpper()
+        {
+            SpinToNextSequence();
+            WriteValuesToByteArray(_buffer, _previousTime, _sequence);
+
+            //Array.Reverse(_buffer);
+
+            var build = new System.Text.StringBuilder();
+            foreach (var b in _buffer)
+            {
+                build.Append(b.ToString("X2"));
+            }
+            return build.ToString();
         }
 
         internal unsafe void WriteValuesToByteArray(byte[] target, long time, short sequence)
