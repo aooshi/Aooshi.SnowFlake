@@ -10,22 +10,6 @@ namespace Aooshi.SnowFlake
     /// </summary>
     public class Generator
     {
-        private static Generator _one = null;
-        /// <summary>
-        /// generatorId one
-        /// </summary>
-        public static Generator One
-        {
-            get
-            {
-                if (_one == null)
-                {
-                    _one = new Generator(1, new DateTime(2019, 1, 1, 1, 1, 1, DateTimeKind.Utc));
-                }
-                return _one;
-            }
-        }
-
         // should be between 40 (34 years) and 42 (139 years)
         internal static int NumberOfTimeBits = 42;
 
@@ -100,6 +84,14 @@ namespace Aooshi.SnowFlake
 
             Array.Reverse(_buffer);
             return BitConverter.ToUInt64(_buffer, 0);
+        }
+
+        public byte[] NextData()
+        {
+            SpinToNextSequence();
+            WriteValuesToByteArray(_buffer, _previousTime, _sequence);
+
+            return _buffer;
         }
 
         public string NextHex()
