@@ -10,10 +10,21 @@ namespace Aooshi.SnowFlake
     /// </summary>
     public class Generator
     {
+        private static Generator _one = null;
         /// <summary>
         /// generatorId one
         /// </summary>
-        public readonly static Generator One = new Generator(1, new DateTime(2019, 1, 1, 1, 1, 1, DateTimeKind.Utc));
+        public static Generator One
+        {
+            get
+            {
+                if (_one == null)
+                {
+                    _one = new Generator(1, new DateTime(2019, 1, 1, 1, 1, 1, DateTimeKind.Utc));
+                }
+                return _one;
+            }
+        }
 
         // should be between 40 (34 years) and 42 (139 years)
         internal static int NumberOfTimeBits = 42;
