@@ -90,7 +90,7 @@ namespace Aooshi.SnowFlake
         {
             SpinToNextSequence();
             WriteValuesToByteArray(_buffer, _previousTime, _sequence);
-
+            Array.Reverse(_buffer);
             return _buffer;
         }
 
@@ -98,9 +98,7 @@ namespace Aooshi.SnowFlake
         {
             SpinToNextSequence();
             WriteValuesToByteArray(_buffer, _previousTime, _sequence);
-
-            //Array.Reverse(_buffer);
-
+            Array.Reverse(_buffer);
             var build = new System.Text.StringBuilder();
             foreach (var b in _buffer)
             {
@@ -113,9 +111,7 @@ namespace Aooshi.SnowFlake
         {
             SpinToNextSequence();
             WriteValuesToByteArray(_buffer, _previousTime, _sequence);
-
-            //Array.Reverse(_buffer);
-
+            Array.Reverse(_buffer);
             var build = new System.Text.StringBuilder();
             foreach (var b in _buffer)
             {
